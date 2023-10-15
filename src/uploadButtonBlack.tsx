@@ -27,8 +27,8 @@ interface ImageConverterProps {
   getImageBinary: (imageElement: string | ArrayBuffer | null) => void;
 }
 
-const UploadButtonWhite: React.FC<ImageConverterProps> = ({
-  getImageBinary
+const UploadButtonBalck: React.FC<ImageConverterProps> = ({
+  getImageBinary,
 }) => {
   const [imageElement, setImageElement] = useState<
     string | ArrayBuffer | null
@@ -63,8 +63,8 @@ const UploadButtonWhite: React.FC<ImageConverterProps> = ({
         className="      file:mr-4 file:py-2 file:px-4
         file:rounded-full file:border-0
         file:text-sm file:font-semibold
-        file:bg-slate-100 file:text-gray-700
-        hover:file:bg-slate-50  pr-6 rounded-full"
+        file:bg-slate-800 file:text-white
+        hover:file:bg-slate-900 pr-6 rounded-full"
         
         onChange={handleFileChange}
       />
@@ -72,4 +72,4 @@ const UploadButtonWhite: React.FC<ImageConverterProps> = ({
   );
 };
 
-export default UploadButtonWhite;
+export default UploadButtonBalck;

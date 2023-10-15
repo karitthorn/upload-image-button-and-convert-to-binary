@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./input.css";
-import ImageConverter from "./uploadButtonWhite";
+import UploadButtonWhite from "./uploadButtonWhite";
 import BinaryToImage from "./BinaryToImage";
+import UploadButtonBlack from "./uploadButtonBlack";
+import UploadButtonPure from "./uploadButtonPure";
 
 function App() {
   const [img, setImg] = useState<string | ArrayBuffer | null>();
@@ -15,7 +17,9 @@ function App() {
   return (
     <>
     <div className="flex justify-center items-center pt-20">
-      <ImageConverter onImageElementChange={handleImageElementChange} />
+      <UploadButtonWhite getImageBinary={handleImageElementChange} />
+      <UploadButtonBlack getImageBinary={handleImageElementChange}/>
+      <UploadButtonPure getImageBinary={handleImageElementChange} InputClassName=""/>
       <BinaryToImage binaryData={img} />
       </div>
     </>
