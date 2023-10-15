@@ -1,12 +1,12 @@
 {
-  "name": "uploadimage",
+  "name": "upload-image-to-binary-button",
   "version": "0.1.0",
   "private": false,
-  "babel": { 
-  "presets": [
-    "@babel/preset-react"
-  ]
-},
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -47,8 +47,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
     "@types/pako": "^2.0.1",
     "tailwindcss": "^3.3.3"
   }
-  
 }
