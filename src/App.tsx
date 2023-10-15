@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./input.css";
+import ImageConverter from "./uploadButtonWhite";
+import BinaryToImage from "./BinaryToImage";
 
 function App() {
+  const [img, setImg] = useState<string | ArrayBuffer | null>();
+  const handleImageElementChange = (
+    imageElement: string | ArrayBuffer | null
+  ) => {
+    // Handle the imageElement in the parent component
+    setImg(imageElement)
+    console.log("Image element received in parent:", img);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div className="flex justify-center items-center pt-20">
+      <ImageConverter onImageElementChange={handleImageElementChange} />
+      <BinaryToImage binaryData={img} />
+      </div>
+    </>
   );
 }
 
